@@ -39,3 +39,17 @@ function showAllCards() {
         card.style.display = 'block';
     });
 }
+
+
+
+document.getElementById('menuToggle').addEventListener('click', function () {
+    document.querySelector('.offcanvas').style.left = '0';
+    document.querySelector('.overlay').style.display = 'block';
+});
+
+document.getElementById('closeButton').addEventListener('click', function () {
+    document.querySelector('.offcanvas').style.left = '-100%';
+    document.querySelector('.overlay').style.display = 'none';
+});
+
+
