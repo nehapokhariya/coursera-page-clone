@@ -432,7 +432,7 @@ body {
 }
 
 .scrollable-list {
-    max-height: 100vh;
+    min-height: 100vh;
     overflow-y: auto;
     background-color: #f9f9f9;
     border-radius: 5px;
