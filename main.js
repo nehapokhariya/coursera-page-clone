@@ -1,22 +1,36 @@
 // Filter btn js
 
-const filterBtn = document.querySelector('.filter-btn');
-const closeBtn = document.querySelector('.close-btn');
-const offcanvasMenu = document.querySelector('.offcanvas-menu');
+const closeFilterBtn = document.querySelector('#closeFilter');
+const closeSidebarBtn = document.querySelector('#closeSidebar');
+
+// const offcanvasMenu = document.querySelector('.offcanvas-menu');
+
 const openBtn = document.querySelector('.open-btn');
+const filterBtn = document.querySelector('.filter-btn');
+const applyBtn = document.querySelector('#applyFilter');
 
 
 openBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    offcanvasMenu.classList.add('active');
+    document.querySelector('#toggleSidebar').classList.add('active');
 });
 
 filterBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    offcanvasMenu.classList.add('active');
+    document.querySelector('#toggleFilter').classList.add('active');
 });
 
-closeBtn.addEventListener('click', function (e) {
+closeFilterBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    offcanvasMenu.classList.remove('active');
+    document.querySelector('#toggleFilter').classList.remove('active');
+});
+
+closeSidebarBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('#toggleSidebar').classList.remove('active');
+});
+
+applyBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('#toggleFilter').classList.remove('active');
 });
